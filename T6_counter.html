@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counter KJ</title>
+</head>
+<body>
+
+<h2>Counter Program</h2>
+
+<p>Counter Value: <span id="counter">0</span></p>
+
+<button onclick="increment()"> + </button>
+<button onclick="decrement()"> - </button>
+<button onclick="reset()">Reset</button>
+
+<script>
+  let counterValue = 0;
+  const counterElement = document.getElementById("counter");
+
+  const updateCounter =()=> {
+    counterElement.textContent = counterValue;
+  }
+
+  const increment =()=> {
+    counterValue++;
+    updateCounter();
+  }
+
+  const decrement =()=> {
+    counterValue--;
+    updateCounter();
+  }
+
+  const reset =()=> {
+    counterValue = 0;
+    updateCounter();
+  }
+</script>
+
+</body>
+</html>

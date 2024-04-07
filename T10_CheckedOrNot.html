@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KJ</title>
+</head>
+<body>
+
+<label for="checkbox">Click me:</label>
+<input type="checkbox" id="checkbox">
+<br>
+<br>
+
+<div id="status"></div>
+
+<script>
+
+    const checkbox = document.getElementById('checkbox');
+    const statusDiv = document.getElementById('status');
+    
+    const check =()=> {
+        if (checkbox.checked) {
+            statusDiv.textContent = 'Checkbox is checked.';
+        } else {
+            statusDiv.textContent = 'Checkbox is unchecked.';
+        }
+    }
+    
+    check();
+
+    checkbox.addEventListener('change', check);
+</script>
+
+</body>
+</html>
